@@ -1,4 +1,4 @@
-# 📘 JavaScript Projects
+# 📘 Learning JavaScript
 
 ---
 
