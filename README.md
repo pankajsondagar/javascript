@@ -1,7 +1,5 @@
 # 📘 JavaScript Projects
 
-A curated collection of **JavaScript Fundamentals & DOM-based projects** designed to build strong core concepts through hands-on practice.
-
 ---
 
 ## 🧠 Fundamentals & DOM Basics
@@ -9,15 +7,8 @@ A curated collection of **JavaScript Fundamentals & DOM-based projects** designe
 ---
 
 ## 🎂 Age Calculator
-
-**Skills Used**
-- Variables & operators
-- DOM manipulation
-
-**What You’ll Learn**
-- Date manipulation & calculations
-- Input validation
-- Dynamic UI updates
+**Skills Used:** Variables & operators, DOM manipulation  
+**What You’ll Learn:** Date manipulation & calculations, input validation, dynamic UI updates  
 
 📸 **Screenshot**  
 ![Age Calculator](screenshots/age-calculator.png)
@@ -25,16 +16,8 @@ A curated collection of **JavaScript Fundamentals & DOM-based projects** designe
 ---
 
 ## 🌡️ Temperature Converter
-
-**Skills Used**
-- Functions
-- Conditionals
-- Multiple input handling
-
-**What You’ll Learn**
-- Real-time value updates
-- Temperature conversion formulas
-- Handling multiple outputs
+**Skills Used:** Functions, conditionals, multiple input handling  
+**What You’ll Learn:** Real-time updates, temperature conversion formulas, multiple output handling  
 
 📸 **Screenshot**  
 ![Temperature Converter](screenshots/temperature-converter.png)
@@ -42,16 +25,8 @@ A curated collection of **JavaScript Fundamentals & DOM-based projects** designe
 ---
 
 ## 💬 Random Quote Generator
-
-**Skills Used**
-- Arrays & objects
-- Random selection logic
-- Event handling
-
-**What You’ll Learn**
-- Working with collections of data
-- Random number generation
-- Preventing duplicate values
+**Skills Used:** Arrays & objects, random logic, event handling  
+**What You’ll Learn:** Data collections, random number generation, duplicate prevention  
 
 📸 **Screenshot**  
 ![Random Quote Generator](screenshots/random-quote-generator.png)
@@ -59,16 +34,8 @@ A curated collection of **JavaScript Fundamentals & DOM-based projects** designe
 ---
 
 ## 🎨 Color Flipper
-
-**Skills Used**
-- Random color generation
-- String manipulation
-- Dynamic styling
-
-**What You’ll Learn**
-- HEX & RGB color formats
-- Color brightness calculation
-- Applying styles dynamically
+**Skills Used:** Random color generation, string manipulation, dynamic styling  
+**What You’ll Learn:** HEX/RGB colors, brightness calculation, dynamic style updates  
 
 📸 **Screenshot**  
 ![Color Flipper](screenshots/color-flipper.png)
@@ -76,16 +43,8 @@ A curated collection of **JavaScript Fundamentals & DOM-based projects** designe
 ---
 
 ## 🔢 Simple Counter
-
-**Skills Used**
-- State management
-- Increment / decrement logic
-- Conditional styling
-
-**What You’ll Learn**
-- Managing application state
-- Keyboard & button interactions
-- Basic animations
+**Skills Used:** State management, increment/decrement logic, conditional styling  
+**What You’ll Learn:** State handling, keyboard & button events, animations  
 
 📸 **Screenshot**  
 ![Simple Counter](screenshots/simple-counter.png)
@@ -93,16 +52,8 @@ A curated collection of **JavaScript Fundamentals & DOM-based projects** designe
 ---
 
 ## ✅ Todo List App
-
-**Skills Used**
-- Array manipulation
-- CRUD operations
-- State management
-
-**What You’ll Learn**
-- Add, edit, delete & filter tasks
-- Persistent UI state handling
-- Dynamic list rendering
+**Skills Used:** Array manipulation, CRUD operations, state management  
+**What You’ll Learn:** Task filtering, persistent state, dynamic rendering  
 
 📸 **Screenshot**  
 ![Todo List App](screenshots/todo-list.png)
