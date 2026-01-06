@@ -13,7 +13,9 @@
 📸 **Screenshot**  
 ![Age Calculator](screenshots/age-calculator.png)
 
-[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/age-calculator/)
+<a href="https://pankajsondagar.github.io/javascript/beginner-projects/age-calculator/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
 ---
 
 ## 🌡️ Temperature Converter
@@ -23,7 +25,9 @@
 📸 **Screenshot**  
 ![Temperature Converter](screenshots/temperature-converter.png)
 
-[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/temperature-converter/)
+<a href="https://pankajsondagar.github.io/javascript/beginner-projects/temperature-converter/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
 ---
 
 ## 💬 Random Quote Generator
@@ -33,7 +37,9 @@
 📸 **Screenshot**  
 ![Random Quote Generator](screenshots/random-quote-generator.png)
 
-[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/quote-generator/)
+<a href="https://pankajsondagar.github.io/javascript/beginner-projects/quote-generator/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
 ---
 
 ## 🎨 Color Flipper
@@ -43,7 +49,9 @@
 📸 **Screenshot**  
 ![Color Flipper](screenshots/color-flipper.png)
 
-[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/color-flipper/)
+<a href="https://pankajsondagar.github.io/javascript/beginner-projects/color-flipper/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
 ---
 
 ## 🔢 Simple Counter
@@ -53,7 +61,9 @@
 📸 **Screenshot**  
 ![Simple Counter](screenshots/simple-counter.png)
 
-[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/simple-counter/)
+<a href="https://pankajsondagar.github.io/javascript/beginner-projects/simple-counter/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
 ---
 
 ## ✅ Todo List App
@@ -64,4 +74,7 @@
 ![Todo List App](screenshots/todo-list.png)
 
 [Demo](https://pankajsondagar.github.io/javascript/beginner-projects/todo-list/)
+<a href="https://pankajsondagar.github.io/javascript/beginner-projects/todo-list/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
 ---
