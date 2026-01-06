@@ -13,6 +13,7 @@
 📸 **Screenshot**  
 ![Age Calculator](screenshots/age-calculator.png)
 
+[Demo](https://pankajsondagar.github.io/beginner-projects/age-calculator/)
 ---
 
 ## 🌡️ Temperature Converter
@@ -59,6 +60,3 @@
 ![Todo List App](screenshots/todo-list.png)
 
 ---
-
-## 📁 Screenshots Folder Structure
-
