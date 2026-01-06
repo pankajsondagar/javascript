@@ -83,3 +83,22 @@
 </a>
 
 ---
+
+---
+
+## 🧠 Intermediate Concepts 
+
+---
+
+## 🎂 Password Generator
+**Skills Used:** String Manipulation
+**What You’ll Learn:** String manipulation and concatenation, Clipboard API for copying text, DOM manipulation and styling
+
+📸 **Screenshot**  
+![Age Calculator](screenshots/password-generator.png)
+
+<a href="https://pankajsondagar.github.io/javascript/beginner-projects/password-generator/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
+
+---
