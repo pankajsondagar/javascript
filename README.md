@@ -16,6 +16,7 @@
 <a href="https://pankajsondagar.github.io/javascript/beginner-projects/age-calculator/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
+
 ---
 
 ## 🌡️ Temperature Converter
@@ -28,6 +29,7 @@
 <a href="https://pankajsondagar.github.io/javascript/beginner-projects/temperature-converter/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
+
 ---
 
 ## 💬 Random Quote Generator
@@ -40,6 +42,7 @@
 <a href="https://pankajsondagar.github.io/javascript/beginner-projects/quote-generator/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
+
 ---
 
 ## 🎨 Color Flipper
@@ -52,6 +55,7 @@
 <a href="https://pankajsondagar.github.io/javascript/beginner-projects/color-flipper/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
+
 ---
 
 ## 🔢 Simple Counter
@@ -64,6 +68,7 @@
 <a href="https://pankajsondagar.github.io/javascript/beginner-projects/simple-counter/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
+
 ---
 
 ## ✅ Todo List App
@@ -77,4 +82,5 @@
 <a href="https://pankajsondagar.github.io/javascript/beginner-projects/todo-list/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
+
 ---
