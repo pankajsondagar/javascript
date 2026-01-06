@@ -13,7 +13,7 @@
 📸 **Screenshot**  
 ![Age Calculator](screenshots/age-calculator.png)
 
-[Demo](https://pankajsondagar.github.io/beginner-projects/age-calculator/)
+[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/age-calculator/)
 ---
 
 ## 🌡️ Temperature Converter
@@ -23,6 +23,7 @@
 📸 **Screenshot**  
 ![Temperature Converter](screenshots/temperature-converter.png)
 
+[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/temperature-converter/)
 ---
 
 ## 💬 Random Quote Generator
@@ -32,6 +33,7 @@
 📸 **Screenshot**  
 ![Random Quote Generator](screenshots/random-quote-generator.png)
 
+[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/quote-generator/)
 ---
 
 ## 🎨 Color Flipper
@@ -41,6 +43,7 @@
 📸 **Screenshot**  
 ![Color Flipper](screenshots/color-flipper.png)
 
+[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/color-flipper/)
 ---
 
 ## 🔢 Simple Counter
@@ -50,6 +53,7 @@
 📸 **Screenshot**  
 ![Simple Counter](screenshots/simple-counter.png)
 
+[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/simple-counter/)
 ---
 
 ## ✅ Todo List App
@@ -59,4 +63,5 @@
 📸 **Screenshot**  
 ![Todo List App](screenshots/todo-list.png)
 
+[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/todo-list/)
 ---
