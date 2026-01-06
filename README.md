@@ -78,7 +78,6 @@
 📸 **Screenshot**  
 ![Todo List App](screenshots/todo-list.png)
 
-[Demo](https://pankajsondagar.github.io/javascript/beginner-projects/todo-list/)
 <a href="https://pankajsondagar.github.io/javascript/beginner-projects/todo-list/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
