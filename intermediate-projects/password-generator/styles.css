@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 100%;
+}
+h1 {
+    color: #667eea;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 32px;
+}
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.password-display {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #e0e0e0;
+}
+.password-text {
+    flex: 1;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    color: #333;
+    word-break: break-all;
+    min-height: 27px;
+}
+.password-text.empty {
+    color: #999;
+    font-style: italic;
+}
+.btn-copy {
+    padding: 10px 15px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+.btn-copy:hover {
+    background: #5568d3;
+}
+.btn-copy.copied {
+    background: #2ecc71;
+}
+.strength-meter {
+    margin-bottom: 25px;
+}
+.strength-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.strength-text {
+    font-weight: 600;
+}
+.strength-bar {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.strength-fill {
+    height: 100%;
+    transition: width 0.3s, background 0.3s;
+    width: 0%;
+}
+.strength-weak { background: #e74c3c; }
+.strength-medium { background: #f39c12; }
+.strength-strong { background: #2ecc71; }
+.options {
+    margin-bottom: 25px;
+}
+.option-group {
+    margin-bottom: 20px;
+}
+.option-label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+input[type="range"] {
+    flex: 1;
+    height: 6px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+}
+.length-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #667eea;
+    min-width: 35px;
+    text-align: center;
+}
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #667eea;
+}
+.checkbox-label {
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+.btn-generate {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+.btn-generate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+.btn-generate:active {
+    transform: translateY(0);
+}
+.tips {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0f7ff;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+.tips h3 {
+    font-size: 14px;
+    color: #667eea;
+    margin-bottom: 8px;
+}
+.tips ul {
+    margin-left: 20px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}

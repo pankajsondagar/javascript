@@ -4,92 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Calculator</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 400px;
-            width: 100%;
-        }
-        h2 {
-            color: #667eea;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .input-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 600;
-        }
-        input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border 0.3s;
-        }
-        input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-        button {
-            width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        button:hover {
-            transform: translateY(-2px);
-        }
-        button:active {
-            transform: translateY(0);
-        }
-        .result {
-            margin-top: 25px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            display: none;
-        }
-        .result.show {
-            display: block;
-        }
-        .result h2 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        .result p {
-            color: #555;
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -108,48 +23,6 @@
             <p id="detailsOutput"></p>
         </div>
     </div>
-
-    <script>
-        // Set max date to today
-        document.getElementById('birthdate').max = new Date().toISOString().split('T')[0];
-
-        function calculateAge() {
-            const birthdateInput = document.getElementById('birthdate').value;
-            
-            if (!birthdateInput) {
-                alert('Please enter your birth date!');
-                return;
-            }
-            
-            const birthdate = new Date(birthdateInput);
-            const today = new Date();
-            
-            // Calculate age
-            let age = today.getFullYear() - birthdate.getFullYear();
-            const monthDiff = today.getMonth() - birthdate.getMonth();
-            
-            // Adjust if birthday hasn't occurred this year
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthdate.getDate())) {
-                age--;
-            }
-            
-            // Calculate exact days
-            const oneDay = 24 * 60 * 60 * 1000;
-            const daysDiff = Math.floor((today - birthdate) / oneDay);
-            
-            // Calculate months
-            let months = monthDiff;
-            if (months < 0) {
-                months += 12;
-            }
-            
-            // Display results
-            document.getElementById('ageOutput').textContent = `You are ${age} years old`;
-            document.getElementById('detailsOutput').textContent = 
-                `That's approximately ${months} months since your last birthday, or ${daysDiff.toLocaleString()} days total!`;
-            
-            document.getElementById('result').classList.add('show');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,15 @@
 # 📘 Learning JavaScript
 
 ---
+### What is JavaScript?
+
+JavaScript is a high-level, interpreted programming language used to create interactive, dynamic, and responsive web applications.  
+
+It runs directly in the browser and allows developers to control webpage behavior such as user interactions, data updates, animations, and real-time content changes. 
+
+JavaScript is one of the core web technologies, alongside HTML (structure) and CSS (styling), and is also widely used on the server-side, mobile apps, and desktop applications.  
+
+---
 
 ## 🧠 Fundamentals & DOM Basics
 
@@ -103,6 +112,54 @@
 ![Password Generator](screenshots/tip-calculator.png)
 
 <a href="https://pankajsondagar.github.io/javascript/intermediate-projects/tip-calculator/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
+
+---
+
+## 🎂 BMI Calculator
+**What You’ll Learn:** 
+
+📸 **Screenshot**  
+![Password Generator](screenshots/bmi-calculator.png)
+
+<a href="https://pankajsondagar.github.io/javascript/intermediate-projects/bmi-calculator/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
+
+---
+
+## 🎂 Word Counter
+**What You’ll Learn:** 
+
+📸 **Screenshot**  
+![Password Generator](screenshots/word-counter.png)
+
+<a href="https://pankajsondagar.github.io/javascript/intermediate-projects/word-counter/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
+
+---
+
+## 🎂 Rock Paper Scissors
+**What You’ll Learn:** 
+
+📸 **Screenshot**  
+![Password Generator](screenshots/rock-paper-scissors.png)
+
+<a href="https://pankajsondagar.github.io/javascript/intermediate-projects/rock-paper-scissors/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
+
+---
+
+## 🎂 Quiz App
+**What You’ll Learn:** 
+
+📸 **Screenshot**  
+![Password Generator](screenshots/quiz-app.png)
+
+<a href="https://pankajsondagar.github.io/javascript/intermediate-projects/quiz-app/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
 
