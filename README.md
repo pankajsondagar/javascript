@@ -118,7 +118,7 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 ---
 
 ## 🎂 BMI Calculator
-**What You’ll Learn:** 
+**What You’ll Learn:** Validation, Calculations, Conditionals & Ranges, Data Structures, DOM Manipulation, User Experience
 
 📸 **Screenshot**  
 ![Password Generator](screenshots/bmi-calculator.png)
@@ -130,7 +130,7 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 ---
 
 ## 🎂 Word Counter
-**What You’ll Learn:** 
+**What You’ll Learn:**  String manipulation in depth, Text parsing and analysis, Real-time DOM updates, Frequency counting algorithms, Regular expressions basics, Array transformation methods
 
 📸 **Screenshot**  
 ![Password Generator](screenshots/word-counter.png)
@@ -154,7 +154,7 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 ---
 
 ## 🎂 Quiz App
-**What You’ll Learn:** 
+**What You’ll Learn:**
 
 📸 **Screenshot**  
 ![Password Generator](screenshots/quiz-app.png)

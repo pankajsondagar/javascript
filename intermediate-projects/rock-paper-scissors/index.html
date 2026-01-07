@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✊✋✌️ Rock Paper Scissors</h1>
+        <p class="subtitle">Choose your weapon and beat the computer!</p>
+        
+        <div class="game-mode">
+            <div class="mode-toggle">
+                <button class="mode-btn active" onclick="setGameMode('classic')">Classic</button>
+                <button class="mode-btn" onclick="setGameMode('best-of-5')">Best of 5</button>
+                <button class="mode-btn" onclick="setGameMode('first-to-10')">First to 10</button>
+            </div>
+        </div>
+        
+        <div class="streak hidden" id="streak">
+            🔥 Win Streak: <span id="streakCount">0</span>
+        </div>
+        
+        <div class="scoreboard">
+            <div class="score-box">
+                <div class="score-label">You</div>
+                <div class="score-value" id="playerScore">0</div>
+            </div>
+            <div class="score-divider">:</div>
+            <div class="score-box">
+                <div class="score-label">Computer</div>
+                <div class="score-value" id="computerScore">0</div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="choices">
+                <button class="choice" onclick="playGame('rock')">
+                    <div class="choice-icon">✊</div>
+                    <div class="choice-label">Rock</div>
+                </button>
+                <button class="choice" onclick="playGame('paper')">
+                    <div class="choice-icon">✋</div>
+                    <div class="choice-label">Paper</div>
+                </button>
+                <button class="choice" onclick="playGame('scissors')">
+                    <div class="choice-icon">✌️</div>
+                    <div class="choice-label">Scissors</div>
+                </button>
+            </div>
+        </div>
+        
+        <div class="result-area hidden" id="resultArea">
+            <div class="battle-display">
+                <div class="battle-choice">
+                    <div class="battle-icon" id="playerChoice">❓</div>
+                    <div class="battle-label">You</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="battle-choice">
+                    <div class="battle-icon" id="computerChoice">❓</div>
+                    <div class="battle-label">Computer</div>
+                </div>
+            </div>
+            <div class="result-message" id="resultMessage">Choose your move!</div>
+            <div class="result-description" id="resultDescription"></div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="totalGames">0</div>
+                <div class="stat-label">Total Games</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="winRate">0%</div>
+                <div class="stat-label">Win Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="winStreak">0</div>
+                <div class="stat-label">Best Streak</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="ties">0</div>
+                <div class="stat-label">Ties</div>
+            </div>
+        </div>
+        
+        <div class="history">
+            <div class="history-title">Recent Games</div>
+            <div class="history-list" id="historyList">
+                <div style="color: #999; padding: 20px;">Play a game to see history</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-new" onclick="newGame()">New Game</button>
+            <button class="btn btn-reset" onclick="resetStats()">Reset Stats</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
