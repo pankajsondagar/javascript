@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 BMI Calculator</h1>
+        <p class="subtitle">Calculate your Body Mass Index and health status</p>
+        
+        <div class="unit-toggle">
+            <button class="unit-btn active" onclick="switchUnit('metric')">Metric</button>
+            <button class="unit-btn" onclick="switchUnit('imperial')">Imperial</button>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="weight">Weight</label>
+                <div class="input-wrapper">
+                    <input type="number" id="weight" placeholder="Enter weight" step="0.1" min="0">
+                    <span class="unit-label" id="weightUnit">kg</span>
+                </div>
+                <span class="error-message" id="weightError">Please enter a valid weight</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="height">Height</label>
+                <div class="input-wrapper" id="heightWrapper">
+                    <input type="number" id="height" placeholder="Enter height" step="0.1" min="0">
+                    <span class="unit-label" id="heightUnit">cm</span>
+                </div>
+                <span class="error-message" id="heightError">Please enter a valid height</span>
+            </div>
+        </div>
+        
+        <button class="btn-calculate" onclick="calculateBMI()">Calculate BMI</button>
+        
+        <div class="results" id="results">
+            <div class="bmi-display">
+                <div class="bmi-value" id="bmiValue">0.0</div>
+                <div class="bmi-category" id="bmiCategory">Normal</div>
+            </div>
+            
+            <div class="bmi-chart">
+                <div class="chart-bar">
+                    <div class="chart-segment segment-underweight">Underweight</div>
+                    <div class="chart-segment segment-normal">Normal</div>
+                    <div class="chart-segment segment-overweight">Overweight</div>
+                    <div class="chart-segment segment-obese">Obese</div>
+                    <div class="bmi-indicator" id="bmiIndicator"></div>
+                </div>
+                <div class="chart-labels">
+                    <span>0</span>
+                    <span>18.5</span>
+                    <span>25</span>
+                    <span>30</span>
+                    <span>40</span>
+                </div>
+            </div>
+            
+            <div class="health-info" id="healthInfo">
+                <h3>💡 Health Information</h3>
+                <p id="healthMessage">Your BMI is in the normal range. Keep up the good work!</p>
+            </div>
+            
+            <div class="weight-range">
+                <h3>🎯 Healthy Weight Range</h3>
+                <div class="range-display">
+                    <div class="range-item">
+                        <div class="range-label">Minimum</div>
+                        <div class="range-value" id="minWeight">0</div>
+                    </div>
+                    <div class="range-item">
+                        <div class="range-label">Maximum</div>
+                        <div class="range-value" id="maxWeight">0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-card-label">Weight Status</div>
+                    <div class="info-card-value" id="weightStatus">Normal</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">To Healthy Weight</div>
+                    <div class="info-card-value" id="weightDifference">0 kg</div>
+                </div>
+            </div>
+            
+            <button class="btn-reset" onclick="resetCalculator()">Calculate Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

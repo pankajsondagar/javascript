@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Word Counter & Text Analyzer</h1>
+            <p>Real-time text analysis and statistics</p>
+        </div>
+        
+        <div class="editor-section">
+            <div class="toolbar">
+                <button onclick="clearText()">Clear All</button>
+                <button onclick="toUpperCase()">UPPERCASE</button>
+                <button onclick="toLowerCase()">lowercase</button>
+                <button onclick="toTitleCase()">Title Case</button>
+                <button onclick="toSentenceCase()">Sentence case</button>
+                <button onclick="copyText()">Copy Text</button>
+            </div>
+            
+            <textarea id="textInput" placeholder="Start typing or paste your text here..." oninput="analyzeText()"></textarea>
+            
+            <div class="char-limit" id="charLimit">0 / 10,000 characters</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="wordCount">0</div>
+                <div class="stat-label">Words</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="charCount">0</div>
+                <div class="stat-label">Characters</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="charNoSpaces">0</div>
+                <div class="stat-label">No Spaces</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="sentenceCount">0</div>
+                <div class="stat-label">Sentences</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="paragraphCount">0</div>
+                <div class="stat-label">Paragraphs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgWordLength">0</div>
+                <div class="stat-label">Avg Word</div>
+            </div>
+        </div>
+        
+        <div class="analysis-section">
+            <div class="analysis-tabs">
+                <button class="tab active" onclick="switchTab('details')">Details</button>
+                <button class="tab" onclick="switchTab('words')">Top Words</button>
+                <button class="tab" onclick="switchTab('reading')">Reading Time</button>
+            </div>
+            
+            <div id="details" class="tab-content active">
+                <div class="info-row">
+                    <span class="info-label">Longest Word</span>
+                    <span class="info-value" id="longestWord">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Shortest Word</span>
+                    <span class="info-value" id="shortestWord">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Average Word Length</span>
+                    <span class="info-value" id="avgLength">0 characters</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Unique Words</span>
+                    <span class="info-value" id="uniqueWords">0</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Lines</span>
+                    <span class="info-value" id="lineCount">0</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Spaces</span>
+                    <span class="info-value" id="spaceCount">0</span>
+                </div>
+            </div>
+            
+            <div id="words" class="tab-content">
+                <p style="color: #666; margin-bottom: 15px;">Most frequently used words:</p>
+                <div class="word-list" id="topWords">
+                    <span style="color: #999;">Start typing to see word frequency...</span>
+                </div>
+            </div>
+            
+            <div id="reading" class="tab-content">
+                <div class="reading-time">
+                    <h3>⏱️ Estimated Reading Time</h3>
+                    <div class="time-grid">
+                        <div class="time-item">
+                            <div class="time-value" id="readingSlow">0m</div>
+                            <div class="time-label">Slow (125 wpm)</div>
+                        </div>
+                        <div class="time-item">
+                            <div class="time-value" id="readingAverage">0m</div>
+                            <div class="time-label">Average (200 wpm)</div>
+                        </div>
+                        <div class="time-item">
+                            <div class="time-value" id="readingFast">0m</div>
+                            <div class="time-label">Fast (300 wpm)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-row" style="margin-top: 20px;">
+                    <span class="info-label">Speaking Time (150 wpm)</span>
+                    <span class="info-value" id="speakingTime">0 minutes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
