@@ -109,7 +109,7 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 **What You’ll Learn:** Form Handling, Calculations, State Management, DOM Manipulation, UI Patterns, Money Operations   
 
 📸 **Screenshot**  
-![Password Generator](screenshots/tip-calculator.png)
+![Tip Calculator](screenshots/tip-calculator.png)
 
 <a href="https://pankajsondagar.github.io/javascript/intermediate-projects/tip-calculator/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
@@ -121,7 +121,7 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 **What You’ll Learn:** Validation, Calculations, Conditionals & Ranges, Data Structures, DOM Manipulation, User Experience
 
 📸 **Screenshot**  
-![Password Generator](screenshots/bmi-calculator.png)
+![BMI Calculator](screenshots/bmi-calculator.png)
 
 <a href="https://pankajsondagar.github.io/javascript/intermediate-projects/bmi-calculator/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
@@ -133,7 +133,7 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 **What You’ll Learn:**  String manipulation in depth, Text parsing and analysis, Real-time DOM updates, Frequency counting algorithms, Regular expressions basics, Array transformation methods
 
 📸 **Screenshot**  
-![Password Generator](screenshots/word-counter.png)
+![Word Counter](screenshots/word-counter.png)
 
 <a href="https://pankajsondagar.github.io/javascript/intermediate-projects/word-counter/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
@@ -142,10 +142,10 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 ---
 
 ## 🎂 Rock Paper Scissors
-**What You’ll Learn:** 
+**What You’ll Learn:**  Game Logic, Score Management, Data Structures, Advanced Logic, DOM Updates, User Experience   
 
 📸 **Screenshot**  
-![Password Generator](screenshots/rock-paper-scissors.png)
+![Rock Paper Scissors](screenshots/rock-paper-scissors.png)
 
 <a href="https://pankajsondagar.github.io/javascript/intermediate-projects/rock-paper-scissors/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
@@ -154,12 +154,24 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 ---
 
 ## 🎂 Quiz App
-**What You’ll Learn:**
+**What You’ll Learn:** Data Structures, Array Methods, Timers, Scoring Systems, State Management, Algorithm Concepts    
 
 📸 **Screenshot**  
-![Password Generator](screenshots/quiz-app.png)
+![Quiz App](screenshots/quiz-app.png)
 
 <a href="https://pankajsondagar.github.io/javascript/intermediate-projects/quiz-app/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
+
+---
+
+## 🎂 Weather App
+**What You’ll Learn:** Asynchronous JavaScript with async/await, Making API requests with fetch, Error handling in async code, Working with real external data, Browser APIs (geolocation, localStorage), Loading and error states, Data transformation and display      
+
+📸 **Screenshot**  
+![Weather App](screenshots/weather-app.png)
+
+<a href="https://pankajsondagar.github.io/javascript/intermediate-projects/weather-app/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
 

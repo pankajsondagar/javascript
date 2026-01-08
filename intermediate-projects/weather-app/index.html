@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <div class="search-wrapper">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput" 
+                    placeholder="Enter city name (e.g., London, New York, Tokyo)"
+                    onkeypress="handleKeyPress(event)"
+                >
+                <button class="btn btn-search" onclick="searchWeather()">🔍 Search</button>
+                <button class="btn btn-location" onclick="getCurrentLocation()">📍 My Location</button>
+            </div>
+            <div class="recent-searches" id="recentSearches"></div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+        
+        <div class="error" id="error">
+            <div class="error-icon">😕</div>
+            <div class="error-message" id="errorMessage">City not found. Please try again.</div>
+            <button class="btn btn-search" onclick="hideError()">Try Again</button>
+        </div>
+        
+        <div class="weather-card" id="weatherCard">
+            <div class="weather-header">
+                <div class="location-info">
+                    <span class="city-name" id="cityName">London</span>
+                </div>
+                <div class="country" id="country">United Kingdom</div>
+                <div class="date-time" id="dateTime">Monday, January 1, 2024 | 12:00 PM</div>
+                
+                <div class="unit-toggle">
+                    <button class="unit-btn active" onclick="switchUnit('celsius')">°C</button>
+                    <button class="unit-btn" onclick="switchUnit('fahrenheit')">°F</button>
+                </div>
+            </div>
+            
+            <div class="weather-main">
+                <div class="weather-icon-large" id="weatherIcon">☀️</div>
+                <div class="weather-temp">
+                    <div>
+                        <span class="temp-value" id="temperature">20</span>
+                        <span class="temp-unit" id="tempUnit">°C</span>
+                    </div>
+                    <div class="weather-desc" id="weatherDesc">Clear Sky</div>
+                    <div class="feels-like">Feels like <span id="feelsLike">18°C</span></div>
+                </div>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <div class="detail-icon">💨</div>
+                    <div class="detail-label">Wind Speed</div>
+                    <div class="detail-value" id="windSpeed">10 km/h</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">💧</div>
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value" id="humidity">65%</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🌡️</div>
+                    <div class="detail-label">Pressure</div>
+                    <div class="detail-value" id="pressure">1013 hPa</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">👁️</div>
+                    <div class="detail-label">Visibility</div>
+                    <div class="detail-value" id="visibility">10 km</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🌅</div>
+                    <div class="detail-label">Sunrise</div>
+                    <div class="detail-value" id="sunrise">06:30</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🌇</div>
+                    <div class="detail-label">Sunset</div>
+                    <div class="detail-value" id="sunset">18:45</div>
+                </div>
+            </div>
+            
+            <div class="forecast">
+                <div class="forecast-title">5-Day Forecast</div>
+                <div class="forecast-grid" id="forecastGrid"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

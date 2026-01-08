@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 Quiz Master</h1>
+            <p>Test your knowledge and challenge yourself!</p>
+        </div>
+        
+        <!-- Start Screen -->
+        <div class="start-screen" id="startScreen">
+            <h2>Welcome to the Quiz!</h2>
+            
+            <div class="quiz-info">
+                <div class="info-item">
+                    <span class="info-icon">📝</span>
+                    <span>10 multiple choice questions</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">⏱️</span>
+                    <span>15 seconds per question</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🏆</span>
+                    <span>Score points for correct answers</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">⚡</span>
+                    <span>Faster answers = More points</span>
+                </div>
+            </div>
+            
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" onclick="setDifficulty('easy')">Easy</button>
+                <button class="difficulty-btn" onclick="setDifficulty('medium')">Medium</button>
+                <button class="difficulty-btn" onclick="setDifficulty('hard')">Hard</button>
+            </div>
+            
+            <button class="btn-start" onclick="startQuiz()">Start Quiz</button>
+        </div>
+        
+        <!-- Quiz Screen -->
+        <div class="quiz-screen" id="quizScreen">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            
+            <div class="quiz-info-bar">
+                <div class="quiz-counter">
+                    Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span>
+                </div>
+                <div class="timer" id="timer">
+                    <span>⏱️</span>
+                    <span id="timeLeft">15</span>s
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <div class="question-number" id="questionCategory">General Knowledge</div>
+                <div class="question-text" id="questionText"></div>
+                
+                <div class="answers" id="answersContainer"></div>
+                
+                <button class="btn-next" id="btnNext" onclick="nextQuestion()" disabled>Next Question</button>
+            </div>
+        </div>
+        
+        <!-- Results Screen -->
+        <div class="results-screen" id="resultsScreen">
+            <div class="score-circle" id="scoreCircle">
+                <div>
+                    <span id="finalScore">0</span>%
+                    <div class="score-label">Score</div>
+                </div>
+            </div>
+            
+            <h2 class="results-title" id="resultsTitle">Great Job!</h2>
+            <p class="results-message" id="resultsMessage"></p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value" id="correctAnswers">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="incorrectAnswers">0</div>
+                    <div class="stat-label">Incorrect</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="totalPoints">0</div>
+                    <div class="stat-label">Total Points</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="avgTime">0s</div>
+                    <div class="stat-label">Avg Time</div>
+                </div>
+            </div>
+            
+            <div class="review-section">
+                <div class="review-title">📋 Review Your Answers</div>
+                <div id="reviewContainer"></div>
+            </div>
+            
+            <button class="btn-restart" onclick="restartQuiz()">Take Quiz Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
