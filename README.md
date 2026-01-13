@@ -12,6 +12,7 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 ---
 ### Data Types & Variables
 
+Variables
 ```
 // Three ways to declare variables:
 var oldWay = "avoid using var"; // old, function-scoped
@@ -20,6 +21,54 @@ const name = "Sarah"; // cannot be reassigned
 
 age = 26; // ✓ works
 // name = "John"; // ✗ error - can't reassign const
+```
+
+Data Types
+```
+// 1. STRING - text
+let greeting = "Hello";
+let message = 'Single quotes work too';
+let template = `I can include ${greeting} here`; // template literal
+
+// 2. NUMBER - integers and decimals
+let integer = 42;
+let decimal = 3.14;
+let negative = -10;
+
+// 3. BOOLEAN - true or false
+let isStudent = true;
+let hasGraduated = false;
+
+// 4. UNDEFINED - no value assigned
+let notDefined;
+console.log(notDefined); // undefined
+
+// 5. NULL - intentionally empty
+let emptyValue = null;
+
+// 6. Check types
+console.log(typeof greeting); // "string"
+console.log(typeof integer); // "number"
+```
+
+### Operators & Control Flow
+
+Arithmetic Operators
+```
+let a = 10;
+let b = 3;
+
+console.log(a + b); // 13 (addition)
+console.log(a - b); // 7 (subtraction)
+console.log(a * b); // 30 (multiplication)
+console.log(a / b); // 3.333... (division)
+console.log(a % b); // 1 (remainder/modulo)
+console.log(a ** b); // 1000 (exponentiation)
+
+// Increment/Decrement
+let count = 5;
+count++; // count is now 6
+count--; // count is now 5
 ```
 
 ---
@@ -194,7 +243,7 @@ age = 26; // ✓ works
 **What You’ll Learn:** Show/hide state management, Event handling (clicks, keyboard), Dynamic HTML generation, Overlay patterns and positioning, Accessibility basics
 
 📸 **Screenshot**  
-![Weather App](screenshots/accordion-component.png)
+![Weather App](screenshots/accoridon-component.png)
 
 <a href="https://pankajsondagar.github.io/javascript/advanced-projects/accordion-component/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
