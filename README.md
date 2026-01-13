@@ -12,7 +12,8 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 ---
 ### Data Types & Variables
 
-Variables
+<b>Variables</b>
+
 ```
 // Three ways to declare variables:
 var oldWay = "avoid using var"; // old, function-scoped
@@ -23,7 +24,8 @@ age = 26; // ✓ works
 // name = "John"; // ✗ error - can't reassign const
 ```
 
-Data Types
+<b>Data Types</b>
+
 ```
 // 1. STRING - text
 let greeting = "Hello";
@@ -53,7 +55,8 @@ console.log(typeof integer); // "number"
 
 ### Operators & Control Flow
 
-Arithmetic Operators
+<b>Arithmetic Operators</b>
+
 ```
 let a = 10;
 let b = 3;
@@ -71,7 +74,8 @@ count++; // count is now 6
 count--; // count is now 5
 ```
 
-Comparison Operators
+<b>Comparison Operators</b>
+
 ```
 let x = 5;
 let y = "5";
@@ -85,7 +89,8 @@ console.log(x > 3);   // true
 console.log(x <= 5);  // true
 ```
 
-If Statements
+<b>If Statements</b>
+
 ```
 let temperature = 25;
 
@@ -100,7 +105,9 @@ if (temperature > 30) {
 // Ternary operator (shorthand)
 let status = temperature > 25 ? "Warm" : "Cool";
 ```
-Loops
+
+<b>Loops</b>
+
 ```
 // FOR loop - when you know how many times
 for (let i = 0; i < 5; i++) {
@@ -123,7 +130,8 @@ do {
 
 ### Functions
 
-Basic Functions
+<b>Basic Functions</b>
+
 ```
 // Function declaration
 function greet(name) {
@@ -148,7 +156,8 @@ console.log(welcome()); // "Welcome, Guest!"
 console.log(welcome("Sam")); // "Welcome, Sam!"
 ```
 
-Arrow Functions (Modern Syntax)
+<b>Arrow Functions (Modern Syntax)</b>
+
 ```
 // Traditional function
 function multiply(a, b) {
@@ -171,7 +180,8 @@ console.log(square(4)); // 16
 
 ### Objects & Arrays
 
-Objects: Collections of Key-Value Pairs
+<b>Objects: Collections of Key-Value Pairs</b>
+
 ```
 // Creating an object
 const person = {
@@ -205,7 +215,8 @@ const car = {
 };
 ```
 
-Arrays: Ordered Lists
+<b>Arrays: Ordered Lists</b>
+
 ```
 // Creating arrays
 const fruits = ["apple", "banana", "orange"];
@@ -260,7 +271,7 @@ console.log(found); // 4
 
 ### DOM Manipulation
 
-The DOM (Document Object Model) lets JavaScript interact with HTML.
+<b>The DOM (Document Object Model) lets JavaScript interact with HTML.</b>
 
 ```
 // Selecting elements
@@ -303,6 +314,7 @@ input.addEventListener("input", (e) => {
 ### Asynchronous JavaScript
 
 JavaScript can handle tasks that take time without blocking other code.
+
 <b>Callbacks</b>
 
 ```
@@ -348,7 +360,7 @@ fetchUser()
     });
 ```
 
-### Async/Await (Cleanest syntax)
+<b>Async/Await (Cleanest syntax)</b>
 
 ```
 async function getUser() {
