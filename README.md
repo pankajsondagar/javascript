@@ -169,6 +169,283 @@ const square = x => x * x;
 console.log(square(4)); // 16
 ```
 
+### Objects & Arrays
+
+Objects: Collections of Key-Value Pairs
+```
+// Creating an object
+const person = {
+    firstName: "Emma",
+    lastName: "Wilson",
+    age: 28,
+    isEmployed: true,
+    greet: function() {
+        return `Hi, I'm ${this.firstName}`;
+    }
+};
+
+// Accessing properties
+console.log(person.firstName); // "Emma"
+console.log(person["lastName"]); // "Wilson"
+console.log(person.greet()); // "Hi, I'm Emma"
+
+// Adding/modifying properties
+person.city = "Boston";
+person.age = 29;
+
+// Deleting properties
+delete person.isEmployed;
+
+// Object methods (ES6)
+const car = {
+    brand: "Tesla",
+    start() {
+        return `${this.brand} is starting`;
+    }
+};
+```
+
+Arrays: Ordered Lists
+```
+// Creating arrays
+const fruits = ["apple", "banana", "orange"];
+const numbers = [1, 2, 3, 4, 5];
+const mixed = [1, "hello", true, null];
+
+// Accessing elements (zero-indexed)
+console.log(fruits[0]); // "apple"
+console.log(fruits[2]); // "orange"
+
+// Array length
+console.log(fruits.length); // 3
+
+// Adding elements
+fruits.push("grape"); // adds to end
+fruits.unshift("mango"); // adds to beginning
+
+// Removing elements
+let last = fruits.pop(); // removes from end
+let first = fruits.shift(); // removes from beginning
+
+// Finding elements
+let index = fruits.indexOf("banana"); // 1
+let exists = fruits.includes("apple"); // true
+```
+
+Array Methods (Essential)
+```
+const numbers = [1, 2, 3, 4, 5];
+
+// MAP - transform each element
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]
+
+// FILTER - keep elements that match condition
+const evens = numbers.filter(num => num % 2 === 0);
+console.log(evens); // [2, 4]
+
+// REDUCE - combine all elements into single value
+const sum = numbers.reduce((total, num) => total + num, 0);
+console.log(sum); // 15
+
+// FOREACH - perform action on each element
+numbers.forEach(num => {
+    console.log(`Number: ${num}`);
+});
+
+// FIND - get first matching element
+const found = numbers.find(num => num > 3);
+console.log(found); // 4
+```
+
+### DOM Manipulation
+
+The DOM (Document Object Model) lets JavaScript interact with HTML.
+
+```
+// Selecting elements
+const heading = document.getElementById("title");
+const buttons = document.getElementsByClassName("btn");
+const firstButton = document.querySelector(".btn"); // CSS selector
+const allButtons = document.querySelectorAll(".btn");
+
+// Changing content
+heading.textContent = "New Title";
+heading.innerHTML = "<em>Styled Title</em>";
+
+// Changing styles
+heading.style.color = "blue";
+heading.style.fontSize = "32px";
+
+// Adding/removing classes
+heading.classList.add("active");
+heading.classList.remove("inactive");
+heading.classList.toggle("highlight");
+
+// Creating elements
+const newDiv = document.createElement("div");
+newDiv.textContent = "Hello!";
+document.body.appendChild(newDiv);
+
+// Event listeners
+const button = document.querySelector("#myButton");
+button.addEventListener("click", () => {
+    alert("Button clicked!");
+});
+
+// Input handling
+const input = document.querySelector("#nameInput");
+input.addEventListener("input", (e) => {
+    console.log("You typed:", e.target.value);
+});
+```
+
+### Asynchronous JavaScript
+
+JavaScript can handle tasks that take time without blocking other code.
+<b>Callbacks</b>
+
+```
+function fetchData(callback) {
+    setTimeout(() => {
+        const data = { name: "John", age: 30 };
+        callback(data);
+    }, 1000);
+}
+
+fetchData((data) => {
+    console.log(data); // runs after 1 second
+});
+```
+
+<b>Promises (Better than callbacks)</b>
+
+```
+function fetchUser() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const success = true;
+            if (success) {
+                resolve({ name: "Alice", age: 25 });
+            } else {
+                reject("Error fetching user");
+            }
+        }, 1000);
+    });
+}
+
+// Using the promise
+fetchUser()
+    .then(user => {
+        console.log("User:", user);
+        return user.age;
+    })
+    .then(age => {
+        console.log("Age:", age);
+    })
+    .catch(error => {
+        console.error(error);
+    });
+```
+
+### Async/Await (Cleanest syntax)
+
+```
+async function getUser() {
+    try {
+        const response = await fetch("https://api.example.com/user");
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+
+getUser();
+
+// Multiple awaits
+async function getUserAndPosts() {
+    const user = await fetchUser();
+    const posts = await fetchPosts(user.id);
+    return { user, posts };
+}
+```
+
+### Advanced Concepts
+
+<b>Destructuring</b>
+
+```
+// Array destructuring
+const [first, second, ...rest] = [1, 2, 3, 4, 5];
+console.log(first); // 1
+console.log(rest); // [3, 4, 5]
+
+// Object destructuring
+const person = { name: "Bob", age: 30, city: "NYC" };
+const { name, age } = person;
+console.log(name); // "Bob"
+
+// Rename while destructuring
+const { name: personName } = person;
+```
+
+<b>Spread Operator</b>
+
+```
+// Copying arrays
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
+
+// Merging arrays
+const combined = [...arr1, ...arr2];
+
+// Copying objects
+const original = { a: 1, b: 2 };
+const copy = { ...original, c: 3 }; // { a: 1, b: 2, c: 3 }
+```
+
+<b>Classes</b>
+
+```
+class Animal {
+    constructor(name, type) {
+        this.name = name;
+        this.type = type;
+    }
+    
+    speak() {
+        return `${this.name} makes a sound`;
+    }
+}
+
+class Dog extends Animal {
+    constructor(name) {
+        super(name, "dog");
+    }
+    
+    speak() {
+        return `${this.name} barks!`;
+    }
+}
+
+const myDog = new Dog("Rex");
+console.log(myDog.speak()); // "Rex barks!"
+```
+
+<b>Modules (ES6)</b>
+
+```
+// math.js
+export const add = (a, b) => a + b;
+export const subtract = (a, b) => a - b;
+
+// main.js
+import { add, subtract } from './math.js';
+console.log(add(5, 3)); // 8
+```
+
 ---
 
 ## 🎂 Age Calculator
