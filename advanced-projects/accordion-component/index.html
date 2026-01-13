@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Component</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Accordion Component</h1>
+            <p>Interactive collapsible panels with multiple features</p>
+        </div>
+        
+        <!-- Settings Panel -->
+        <div class="settings">
+            <div class="settings-title">⚙️ Settings</div>
+            <div class="settings-grid">
+                <div class="setting-item">
+                    <input type="checkbox" id="allowMultiple" onchange="updateSettings()">
+                    <label for="allowMultiple">Allow Multiple Open</label>
+                </div>
+                <div class="setting-item">
+                    <input type="checkbox" id="closeOthers" checked onchange="updateSettings()">
+                    <label for="closeOthers">Close Others on Open</label>
+                </div>
+                <div class="setting-item">
+                    <input type="checkbox" id="animateToggle" checked onchange="updateSettings()">
+                    <label for="animateToggle">Animate Toggle</label>
+                </div>
+                <div class="setting-item">
+                    <input type="checkbox" id="persistState" onchange="updateSettings()">
+                    <label for="persistState">Remember State</label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Accordion -->
+        <div class="accordion-container" id="mainAccordion">
+            <!-- FAQ Section -->
+            <div class="accordion-item" data-id="faq1">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-icon">❓</span>
+                        <span>What is an Accordion Component?</span>
+                        <span class="badge">Popular</span>
+                    </div>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        An accordion component is a UI pattern that allows users to toggle between hiding and showing content sections. It's commonly used for FAQs, menus, and content organization. The name comes from the musical instrument, which expands and contracts similar to how these panels work.
+                        
+                        <p style="margin-top: 15px;"><strong>Key Benefits:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Saves screen space by hiding content</li>
+                            <li>Improves content organization</li>
+                            <li>Enhances user experience with progressive disclosure</li>
+                            <li>Works great on mobile devices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Features Section -->
+            <div class="accordion-item" data-id="faq2">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-icon">✨</span>
+                        <span>What Features Are Included?</span>
+                    </div>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        This accordion component includes several advanced features:
+                        
+                        <div class="nested-accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header" onclick="toggleNested(this, event)">
+                                    <div class="accordion-title">
+                                        <span>🎨 Smooth Animations</span>
+                                    </div>
+                                    <span class="accordion-toggle">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-body">
+                                        Smooth height transitions with CSS animations, rotating icons, and fade effects for a polished user experience.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header" onclick="toggleNested(this, event)">
+                                    <div class="accordion-title">
+                                        <span>⚡ State Management</span>
+                                    </div>
+                                    <span class="accordion-toggle">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-body">
+                                        Track which panels are open, remember user preferences with localStorage, and provide flexible toggle options.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <div class="accordion-header" onclick="toggleNested(this, event)">
+                                    <div class="accordion-title">
+                                        <span>🎯 Accessibility</span>
+                                    </div>
+                                    <span class="accordion-toggle">▼</span>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-body">
+                                        Keyboard navigation support, proper ARIA attributes, and focus management for screen readers.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Code Example -->
+            <div class="accordion-item" data-id="faq3">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-icon">💻</span>
+                        <span>How Do I Implement This?</span>
+                        <span class="badge">Tutorial</span>
+                    </div>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p><strong>Basic Structure:</strong></p>
+                        <pre style="background: #2d2d2d; color: #f8f8f8; padding: 15px; border-radius: 8px; overflow-x: auto; margin-top: 10px;">
+&lt;div class="accordion-item"&gt;
+  &lt;div class="accordion-header" onclick="toggle()"&gt;
+    Title
+  &lt;/div&gt;
+  &lt;div class="accordion-content"&gt;
+    Content here
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        
+                        <p style="margin-top: 15px;"><strong>JavaScript Toggle Function:</strong></p>
+                        <pre style="background: #2d2d2d; color: #f8f8f8; padding: 15px; border-radius: 8px; overflow-x: auto; margin-top: 10px;">
+function toggle(header) {
+  header.classList.toggle('active');
+  const content = header.nextElementSibling;
+  content.classList.toggle('active');
+}</pre>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Best Practices -->
+            <div class="accordion-item" data-id="faq4">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-icon">📚</span>
+                        <span>What Are Best Practices?</span>
+                    </div>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <ol style="margin-left: 20px; line-height: 2;">
+                            <li><strong>Use Clear Labels:</strong> Make headers descriptive and scannable</li>
+                            <li><strong>Limit Nesting:</strong> Avoid more than 2 levels of nested accordions</li>
+                            <li><strong>Provide Visual Feedback:</strong> Use icons to indicate expand/collapse state</li>
+                            <li><strong>Consider Mobile:</strong> Ensure touch targets are large enough (44x44px minimum)</li>
+                            <li><strong>Performance:</strong> Use CSS transitions instead of JavaScript animations</li>
+                            <li><strong>Accessibility:</strong> Add ARIA attributes and keyboard support</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Use Cases -->
+            <div class="accordion-item" data-id="faq5">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="accordion-title">
+                        <span class="accordion-icon">🎯</span>
+                        <span>When Should I Use Accordions?</span>
+                    </div>
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p><strong>Great for:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                            <li>FAQ sections - Perfect for Q&A format</li>
+                            <li>Mobile navigation - Saves vertical space</li>
+                            <li>Settings panels - Organize related options</li>
+                            <li>Product specifications - Group technical details</li>
+                            <li>Step-by-step instructions - Break down complex processes</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>Avoid for:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                            <li>Content users need to compare side-by-side</li>
+                            <li>Very short content (just show it instead)</li>
+                            <li>Critical information that must be visible</li>
+                            <li>Long-form reading (use pagination instead)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="actions">
+            <button class="btn btn-primary" onclick="openAll()">📖 Open All</button>
+            <button class="btn btn-primary" onclick="closeAll()">📕 Close All</button>
+            <button class="btn btn-secondary" onclick="toggleAll()">🔄 Toggle All</button>
+            <button class="btn btn-secondary" onclick="openFirst()">1️⃣ Open First</button>
+            <button class="btn btn-secondary" onclick="resetState()">🔃 Reset</button>
+        </div>
+        
+        <!-- Statistics -->
+        <div class="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalItems">5</div>
+                    <div class="stat-label">Total Items</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="openItems">0</div>
+                    <div class="stat-label">Open Items</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="closedItems">5</div>
+                    <div class="stat-label">Closed Items</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="toggleCount">0</div>
+                    <div class="stat-label">Total Toggles</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

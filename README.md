@@ -7,7 +7,20 @@ JavaScript is a high-level, interpreted programming language used to create inte
 
 It runs directly in the browser and allows developers to control webpage behavior such as user interactions, data updates, animations, and real-time content changes. 
 
-JavaScript is one of the core web technologies, alongside HTML (structure) and CSS (styling), and is also widely used on the server-side, mobile apps, and desktop applications.  
+JavaScript is one of the core web technologies, alongside HTML (structure) and CSS (styling), and is also widely used on the server-side, mobile apps, and desktop applications.
+
+---
+### Data Types & Variables
+
+```
+// Three ways to declare variables:
+var oldWay = "avoid using var"; // old, function-scoped
+let age = 25; // can be reassigned
+const name = "Sarah"; // cannot be reassigned
+
+age = 26; // ✓ works
+// name = "John"; // ✗ error - can't reassign const
+```
 
 ---
 
@@ -172,6 +185,18 @@ JavaScript is one of the core web technologies, alongside HTML (structure) and C
 ![Weather App](screenshots/weather-app.png)
 
 <a href="https://pankajsondagar.github.io/javascript/intermediate-projects/weather-app/" target="_blank" rel="noopener noreferrer">
+  🚀 Live Demo
+</a>
+
+---
+
+## Accordion Component
+**What You’ll Learn:** Show/hide state management, Event handling (clicks, keyboard), Dynamic HTML generation, Overlay patterns and positioning, Accessibility basics
+
+📸 **Screenshot**  
+![Weather App](screenshots/accordion-component.png)
+
+<a href="https://pankajsondagar.github.io/javascript/advanced-projects/accordion-component/" target="_blank" rel="noopener noreferrer">
   🚀 Live Demo
 </a>
 

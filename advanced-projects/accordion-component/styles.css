@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+.header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+.header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Settings Panel */
+.settings {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.settings-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.setting-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.setting-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #667eea;
+}
+.setting-item label {
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Accordion Styles */
+.accordion-container {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+.accordion-header {
+    padding: 20px 25px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    position: relative;
+}
+.accordion-header:hover {
+    background: #f8f9fa;
+}
+.accordion-header.active {
+    background: #667eea;
+    color: white;
+}
+.accordion-title {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.accordion-icon {
+    font-size: 24px;
+}
+.accordion-toggle {
+    font-size: 24px;
+    transition: transform 0.3s;
+    color: inherit;
+}
+.accordion-header.active .accordion-toggle {
+    transform: rotate(180deg);
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #f8f9fa;
+}
+.accordion-content.active {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+}
+.accordion-body {
+    padding: 25px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Badge */
+.badge {
+    padding: 4px 10px;
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.accordion-header.active .badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Nested Accordion */
+.nested-accordion {
+    margin-top: 15px;
+}
+.nested-accordion .accordion-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.nested-accordion .accordion-header {
+    padding: 15px;
+    font-size: 16px;
+}
+.nested-accordion .accordion-body {
+    padding: 15px;
+}
+
+/* Action Buttons */
+.actions {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+.btn-primary:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+}
+.btn-secondary {
+    background: #e0e0e0;
+    color: #333;
+}
+.btn-secondary:hover {
+    background: #d0d0d0;
+}
+
+/* Stats */
+.stats {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #667eea;
+}
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.accordion-content.active .accordion-body {
+    animation: slideDown 0.3s ease-out;
+}
