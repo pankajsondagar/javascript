@@ -71,9 +71,103 @@ count++; // count is now 6
 count--; // count is now 5
 ```
 
----
+Comparison Operators
+```
+let x = 5;
+let y = "5";
 
-## 🧠 Fundamentals & DOM Basics
+console.log(x == y);  // true (loose equality, converts types)
+console.log(x === y); // false (strict equality, checks type too)
+console.log(x != y);  // false
+console.log(x !== y); // true
+
+console.log(x > 3);   // true
+console.log(x <= 5);  // true
+```
+
+If Statements
+```
+let temperature = 25;
+
+if (temperature > 30) {
+    console.log("It's hot!");
+} else if (temperature > 20) {
+    console.log("Nice weather!"); // This runs
+} else {
+    console.log("It's cold!");
+}
+
+// Ternary operator (shorthand)
+let status = temperature > 25 ? "Warm" : "Cool";
+```
+Loops
+```
+// FOR loop - when you know how many times
+for (let i = 0; i < 5; i++) {
+    console.log(`Count: ${i}`); // 0, 1, 2, 3, 4
+}
+
+// WHILE loop - when condition-based
+let countdown = 3;
+while (countdown > 0) {
+    console.log(countdown); // 3, 2, 1
+    countdown--;
+}
+
+// DO-WHILE - runs at least once
+let answer;
+do {
+    answer = prompt("Enter 'yes':");
+} while (answer !== "yes");
+```
+
+### Functions
+
+Basic Functions
+```
+// Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet("Alex")); // "Hello, Alex!"
+
+// Function with multiple parameters
+function add(a, b) {
+    return a + b;
+}
+
+let sum = add(5, 3); // 8
+
+// Default parameters
+function welcome(name = "Guest") {
+    return `Welcome, ${name}!`;
+}
+
+console.log(welcome()); // "Welcome, Guest!"
+console.log(welcome("Sam")); // "Welcome, Sam!"
+```
+
+Arrow Functions (Modern Syntax)
+```
+// Traditional function
+function multiply(a, b) {
+    return a * b;
+}
+
+// Arrow function (shorter)
+const multiply = (a, b) => {
+    return a * b;
+};
+
+// Even shorter (implicit return)
+const multiply = (a, b) => a * b;
+
+// Single parameter (no parentheses needed)
+const square = x => x * x;
+
+console.log(square(4)); // 16
+```
 
 ---
 
